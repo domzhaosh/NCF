@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09B40F3E-35B1-4746-8B8C-074F35175793</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NCF</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C70A8729402E1F513FA43E343B1E2189C4A2B385</key>
+		<string>https://github.com/domzhaosh/NCF</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xingxing3副本/proj.ios_mac/NCF.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C70A8729402E1F513FA43E343B1E2189C4A2B385</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/domzhaosh/NCF</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C70A8729402E1F513FA43E343B1E2189C4A2B385</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C70A8729402E1F513FA43E343B1E2189C4A2B385</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NCF</string>
+		</dict>
+	</array>
+</dict>
+</plist>
