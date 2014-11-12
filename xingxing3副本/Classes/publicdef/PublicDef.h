@@ -14,10 +14,19 @@
 #include "cocos2d.h"
 #include "cocos-ext.h"
 
+
+//版本修改的
 #include "json/stringbuffer.h"
 #include "json/writer.h"
 #include "json/document.h"
 #include "cocostudio/DictionaryHelper.h"
+
+//版本修改的
+#include "ui/UIWidget.h"
+#include "ui/UITextField.h"
+
+
+
 
 #include <map>
 
@@ -28,7 +37,7 @@ USING_NS_CC_EXT;
 using namespace cocos2d;
 using namespace std;
 using namespace cocostudio;  //版本修改的
-
+using namespace ui;//版本修改的
 
 #define NAME_LEN			128
 
@@ -63,6 +72,16 @@ enum
 };
 
 
+
+//消息接收  CNFLoginScene : public CCLayer ,public CMsgReceiver
+class CMsgReceiver
+{
+public:
+    virtual void RecMsg(int nMsgID,void* pInfo,int nSize)
+    {
+        
+    }
+};
 
 
 /**

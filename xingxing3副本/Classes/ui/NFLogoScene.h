@@ -10,6 +10,9 @@ using namespace cocos2d;
 class CNFLogoScene : public Scene{
 public:
     virtual bool init();
+    
+    static CCScene * scene();
+    
     CREATE_FUNC(CNFLogoScene);
 protected:
     void OnChangeScene();

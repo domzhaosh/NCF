@@ -1,5 +1,26 @@
 #include "NFLogoScene.h"
 #include "NFDataManager.h"
+#include "NFLoginScene.h"
+
+
+CCScene* CNFLogoScene::scene()
+{
+    do
+    {
+        Scene* pScene = Scene::create();
+        CC_BREAK_IF(pScene==NULL);
+        
+        CNFLogoScene* pLayer = CNFLogoScene::create();
+        CC_BREAK_IF(pLayer==NULL);
+        
+        pScene->addChild(pLayer);
+        return pScene;
+        
+    } while (false);
+    log("Fun CNFLogoScene::scene Error!");
+    return NULL;
+}
+
 
 bool CNFLogoScene::init()
 {
@@ -84,9 +105,9 @@ void CNFLogoScene::OnChangeScene()
 	do 
 	{
         //跳转到服务器选择界面
-//        CCScene * pScene = CNFLoginScene::scene();
-//        CC_BREAK_IF(pScene==NULL);
-//        Director::getInstance()->replaceScene(CCTransitionFade::create(1.f,pScene));
+        Scene * pScene = CNFLoginScene::scene();
+        CC_BREAK_IF(pScene==NULL);
+        Director::getInstance()->replaceScene(CCTransitionFade::create(1.f,pScene));
         
         return ;
 	} while (false);

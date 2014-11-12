@@ -15,6 +15,8 @@
 		0539FB301A011CFD004447F7 /* NFLogoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0539FB2E1A011CFD004447F7 /* NFLogoScene.cpp */; };
 		0539FB381A012211004447F7 /* NFDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0539FB361A012211004447F7 /* NFDataManager.cpp */; };
 		0539FB391A012211004447F7 /* NFDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0539FB361A012211004447F7 /* NFDataManager.cpp */; };
+		056219661A135CE000C0665F /* NFLoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 056219641A135CE000C0665F /* NFLoginScene.cpp */; };
+		056219671A135CE000C0665F /* NFLoginScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 056219641A135CE000C0665F /* NFLoginScene.cpp */; };
 		057CE2361A00DC26008A0FE7 /* nf_save.db in Resources */ = {isa = PBXBuildFile; fileRef = 057CE0591A00DC25008A0FE7 /* nf_save.db */; };
 		057CE2371A00DC26008A0FE7 /* nf_save.db in Resources */ = {isa = PBXBuildFile; fileRef = 057CE0591A00DC25008A0FE7 /* nf_save.db */; };
 		057CE2381A00DC26008A0FE7 /* nf_static.db in Resources */ = {isa = PBXBuildFile; fileRef = 057CE05A1A00DC25008A0FE7 /* nf_static.db */; };
@@ -1160,6 +1162,8 @@
 		0539FB2E1A011CFD004447F7 /* NFLogoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NFLogoScene.cpp; path = ../Classes/ui/NFLogoScene.cpp; sourceTree = "<group>"; };
 		0539FB321A011F20004447F7 /* NFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NFDataManager.h; path = ../Classes/datamanager/NFDataManager.h; sourceTree = "<group>"; };
 		0539FB361A012211004447F7 /* NFDataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NFDataManager.cpp; path = ../Classes/NFDataManager.cpp; sourceTree = "<group>"; };
+		056219641A135CE000C0665F /* NFLoginScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NFLoginScene.cpp; path = ../Classes/ui/NFLoginScene.cpp; sourceTree = "<group>"; };
+		056219651A135CE000C0665F /* NFLoginScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NFLoginScene.h; path = ../Classes/ui/NFLoginScene.h; sourceTree = "<group>"; };
 		057CE0591A00DC25008A0FE7 /* nf_save.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nf_save.db; sourceTree = "<group>"; };
 		057CE05A1A00DC25008A0FE7 /* nf_static.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nf_static.db; sourceTree = "<group>"; };
 		057CE05C1A00DC25008A0FE7 /* bianyikunchong.ExportJson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bianyikunchong.ExportJson; sourceTree = "<group>"; };
@@ -2258,6 +2262,8 @@
 			children = (
 				0539FB2D1A011CFD004447F7 /* NFLogoScene.h */,
 				0539FB2E1A011CFD004447F7 /* NFLogoScene.cpp */,
+				056219641A135CE000C0665F /* NFLoginScene.cpp */,
+				056219651A135CE000C0665F /* NFLoginScene.h */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -3603,6 +3609,7 @@
 			files = (
 				0539FB2F1A011CFD004447F7 /* NFLogoScene.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				056219661A135CE000C0665F /* NFLoginScene.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -3621,6 +3628,7 @@
 				0527164F1A0214610091B492 /* sqlite3.c in Sources */,
 				0539FB301A011CFD004447F7 /* NFLogoScene.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				056219671A135CE000C0665F /* NFLoginScene.cpp in Sources */,
 				05DC90E91A0A6B8F002587B5 /* NFJsonTranslater.cpp in Sources */,
 				0527164B1A02114D0091B492 /* PublicDef.cpp in Sources */,
 				0539FB391A012211004447F7 /* NFDataManager.cpp in Sources */,

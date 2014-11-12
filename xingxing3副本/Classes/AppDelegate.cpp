@@ -57,12 +57,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     
     //版本修改的
 //    CCScene *pScene = CNFLogoScene::scene();
-//    pDirector->runWithScene(pScene);
-//    auto pScene = CNFLogoScene::create();
-//    pDirector->runWithScene(pScene);
-    auto scenex = CNFLogoScene::create();
-    pDirector->runWithScene(scenex);
-    
+    Scene *pScene = CNFLogoScene::scene();
+    pDirector->runWithScene(pScene);
+    //    auto pScene = CNFLogoScene::create();
+    //    pDirector->runWithScene(pScene);
     
     return true;
 }
