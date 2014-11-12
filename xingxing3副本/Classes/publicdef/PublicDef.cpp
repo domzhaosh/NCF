@@ -20,3 +20,19 @@ std::string GetStaticDataName()
     return strResult;
 #endif
 }
+
+//存储数据库
+std::string GetSaveDataName()
+{
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WIN32)
+    return _NF_SAVE_DATABASE_FILE_NAME_;
+#else
+    std::string strResult = CCFileUtils::sharedFileUtils()->getWritablePath();
+    strResult+= _NF_SAVE_DATABASE_FILE_NAME_;
+    return strResult;
+#endif
+}
+
+
+
+

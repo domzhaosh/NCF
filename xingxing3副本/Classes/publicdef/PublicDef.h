@@ -30,13 +30,37 @@ using namespace std;
 using namespace cocostudio;  //版本修改的
 
 
-//静态数据管理
-#define _TR_STATIC_DATABASE_FILE_NAME_		"nf_static.db"
-
-
 #define NAME_LEN			128
 
+//静态数据管理
+#define _TR_STATIC_DATABASE_FILE_NAME_		"nf_static.db"
 std::string GetStaticDataName();
+
+
+//存储数据管理
+#define _NF_SAVE_DATABASE_FILE_NAME_		"nf_save.db"
+std::string GetSaveDataName();
+
+
+//版本修改的
+//#define SCREEN_WIDTH		CCDirector::sharedDirector()->getWinSize().width	//屏幕宽(指定分辨率)
+#define SCREEN_WIDTH		Director::getInstance()->getWinSize().width	//屏幕宽(指定分辨率)
+#define SCREEN_HEIGHT		480													//屏幕高(指定分辨率)
+
+//版本修改的
+//#define SCREEN_CENTER		ccp(SCREEN_WIDTH*0.5f,SCREEN_HEIGHT*0.5f)			//屏幕中心
+#define SCREEN_CENTER		Vec2(SCREEN_WIDTH*0.5f,SCREEN_HEIGHT*0.5f)			//屏幕中心
+
+
+
+
+//z轴
+enum
+{
+    enZOrderBack=100,
+    enZOrderMid=100000,
+    enZOrderFront=300000,
+};
 
 
 
@@ -190,7 +214,7 @@ struct tagSkillStaticInfo
 typedef		map<int,tagSkillStaticInfo>				CNFSkillStaticMapBySkillID;				//通过技能ID，得到tagSkillStaticInfo
 typedef		map<int,CNFSkillStaticMapBySkillID>		CNFSkillStaticInfoMapByProtagonistID;	//通过主角ID，得到CNFSkillStaticMapBySkillID
 
-
+typedef		vector<tagSkillStaticInfo>				CNFSkillStaticInfoVec;					//技能静态信息vec
 
 
 
@@ -406,6 +430,59 @@ struct tagTmxStaticInfo
     float	fStartPosY;			//景深地图y轴初始位置
 };
 typedef map<int,tagTmxStaticInfo>	CNFTmxStaticInfoMap;	//景深地图静态信息map
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//敌人AI
+enum enumEnemyAIKind	//行动种类
+{
+    enEnemyAIHold,					//待机
+    enEnemyAICrosswiseApproach,		//直线接近
+    enEnemyAICrosswiseDisapproach,	//直线远离
+    enEnemyLengthwaysApproach,		//并线接近
+    enEnemyLengthwaysDisapproach,	//并线远离
+    enEnemyDirectlyApproach,		//斜角靠近
+    enEnemyCircuity,				//绕背
+    enEnemyAttackTypeShort,			//攻击-近
+    enEnemyAttackTypeLong,			//攻击-远
+};
+enum enumEnemyAICondition	//AI条件
+{
+    enEnemyCondition_SameCrosswise_InRangeLong,				//同线 且范围处于 远距离攻击 和近距离攻击范围之间
+    enEnemyCondition_SameCrosswise_InRangeShort,			//同线 且范围处于 近距离攻击范围内
+    enEnemyCondition_SameCrosswise_NotInRange,				//同线 且范围处于 远距离攻击 范围外
+    enEnemyCondition_NotSameCrosswiss_Near,					//不同线 但距离很近
+    enEnemyCondition_NotSameCrosswiss_Far_FacePlayer,		//不同线 距离远 面对玩家正面
+    enEnemyCondition_NotSameCrosswiss_Far_NotFacePlayer,	//不同线 距离远 面对玩家背面
+};
+
+typedef map<enumEnemyAIKind,int> CMapAIActionOnKind;			//敌人行动类型map
+typedef map<enumEnemyAICondition,CMapAIActionOnKind> CMapAI;	//敌人AI条件map
+typedef map<int,CMapAI> CEnemyAIStaticInfoMap;						//通过ID，得到敌人AI信息
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
